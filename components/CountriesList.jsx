@@ -1,11 +1,26 @@
-import countriesData from '../countriesData'
+import { useEffect, useState } from 'react'
 import CountryCard from './CountryCard'
 
 export default function CountriesList({query}) {
 
-  const filterList = countriesData.filter((country)=>country.name.common.toLowerCase().includes(query))
+  const [countriesData,setCountriesData] = useState([])
+ 
+  useEffect(()=>{
+    fetch('https://restcountries.com/v3.1/independent?status=true')
+    .then((res) => res.json())
+    .then((data)=>{
+     setCountriesData(data)
+     console.log(countriesData)
+    })
+   },[])
   
-  return <>
+  const filterList = countriesData.filter((country)=>country.name.common.toLowerCase().includes(query))
+
+  const clickHandler = () => {
+    setCountriesData([])
+  }
+  
+  return(
   <div className="countries-container">
       {filterList.map((country) => {
         return (
@@ -20,6 +35,5 @@ export default function CountriesList({query}) {
         )
       })}
     </div>
-    
-  </>
+  )
 }
