@@ -12,7 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "parcel": "^2.15.4"
