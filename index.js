@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from 'react-router-dom'; // ✅ correct
 import CountryDetail from './components/CountryDetail.jsx';
+import CountryNotFound from './components/CountryNotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,11 +24,11 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact />,
       },
-      ,
       {
-        path: '/Country',
+        path: '/:Country',
         element: <CountryDetail />,
-      }
+      },
+
     ],
   },
 ]);
