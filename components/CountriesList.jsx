@@ -10,7 +10,6 @@ export default function CountriesList({query}) {
     .then((res) => res.json())
     .then((data)=>{
      setCountriesData(data)
-     console.log(countriesData)
     })
    },[])
   
