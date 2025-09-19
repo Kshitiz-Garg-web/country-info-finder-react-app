@@ -1,0 +1,256 @@
+/* Country Details Main Styles */
+.country-details-shimmer {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.country-details-shimmer .img {
+  width: 500px;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.details-text-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.details-text-container h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.details-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+  margin-bottom: 40px;
+}
+
+.details-text p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.details-text p strong {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.border-countries {
+  margin-top: 40px;
+}
+
+.border-countries b {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: block;
+  color: #2c3e50;
+}
+
+.border-countries a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px 8px 5px 0;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #495057;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.border-countries a:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+}
+
+@media (765< width <941) {
+ .details-text {
+    width: 500px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .country-details-shimmer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .country-details-shimmer .img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .details-text-container {
+    padding-left: 0;
+  }
+  
+  .details-text-container h1 {
+    font-size: 2rem;
+    width: 200px;
+    background-color: rgb(43, 0, 255);
+  }
+  
+  .details-text {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 300px;
+    /* background-color: red; */
+  }
+}
+
+/* Shimmer Animation Keyframes */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Shimmer Effects - Image */
+.country-details-shimmer .img {
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-details-shimmer .img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Shimmer Effects - H1 Title */
+.country-details-shimmer h1 {
+  height: 32px;
+  width: 60%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.country-details-shimmer h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Shimmer Effects - Details Text Paragraphs */
+.country-details-shimmer .details-text p {
+  height: 16px;
+  width: 70%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.country-details-shimmer .details-text p:nth-child(even) {
+  width: 50%;
+}
+
+.country-details-shimmer .details-text p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Shimmer Effects - Border Countries Text */
+.country-details-shimmer .border-countries b {
+  display: inline-block;
+  height: 18px;
+  width: 40%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-details-shimmer .border-countries b::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+/* Shimmer Effects - Border Countries H3 */
+.country-details-shimmer .border-countries h2 {
+  height: 30px;
+  width: 90%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.country-details-shimmer .border-countries h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}

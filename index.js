@@ -1,12 +1,11 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import Contact from './components/Contact.jsx';
 import Home from './components/Home.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
-} from 'react-router-dom'; // ✅ correct
+} from 'react-router-dom';
 import CountryDetail from './components/CountryDetail.jsx';
 import CountryNotFound from './components/CountryNotFound.jsx';
 
@@ -21,12 +20,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/contact',
-        element: <Contact />,
-      },
-      {
         path: '/:Country',
         element: <CountryDetail />,
+      },
+      {
+        path: '*',
+        element: <CountryNotFound />
       },
 
     ],

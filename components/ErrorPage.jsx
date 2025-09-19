@@ -1,18 +1,3 @@
-// import { useRouteError } from "react-router-dom"
-
-// export default function ErrorPage() {
-//   const err = useRouteError()
-//   console.log(err)
-//   return (
-//     <div><h1>Something wenr wrong...</h1>
-//     <p><b>Status -- </b>  {err.status}</p>
-//     <p><b>Msg -- </b> {err.error.message}</p>
-//     <p><b>stack -- </b>{err.error.stack}</p>
-//     </div>
-//   )
-// }
-
-
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
@@ -20,7 +5,7 @@ export default function ErrorPage() {
   console.log(err);
 
   return (
-    <main>
+    <main style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", textAlign: "center", padding: "20px" }}>
       <h1>⚠️ Oops! Something went wrong.</h1>
       <section>
         <h2>Error Details:</h2>

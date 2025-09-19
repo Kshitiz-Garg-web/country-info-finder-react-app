@@ -8,18 +8,46 @@ body {
     --elements-color: white;
     margin: 0;
     font-family: Nunito, sans-serif;
+}
+
+main, header {
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-body.dark {
-    --background-color: hsl(207, 26%, 17%); 
+main.dark, header.dark {
+    --background-color: hsl(207, 26%, 17%);
     --text-color: white;
     --elements-color: hsl(209, 23%, 22%);
 }
 
+.windowSize{
+    /* background-color: rgb(182, 182, 184); */
+    /* position: absolute; */
+    /* bottom:0;
+    left: 50px;
+    z-index: 1000; */
+    /* width: max-content; */
+    /* padding: 12px 24px; */
+    font-size: large;
+    /* margin-left: auto; */
+    /* vertical-align: middle;
+    margin-bottom: 16px; */
+    /* border: 1px solid ;
+    margin: 0; */
+    background-color: rgba(255, 0, 0, 0);
+    padding: 12 0px;
+    margin: 0;
+    height: max-content;
+    width: 100px;
+    border-bottom:1px solid
+    
+}
+
 main {
     padding: 24px;
+    min-height: calc(100vh - 74px);
+    /* background-color: #fff; */
 }
 
 a {
@@ -31,6 +59,14 @@ a {
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
     padding-inline: 24px;
     background-color: var(--elements-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 73px;
+    vertical-align: middle;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: space-between; */
 }
 
 .header-content {
@@ -39,6 +75,7 @@ a {
     justify-content: space-between;
     max-width: 1200px;
     margin-inline: auto;
+    height: 100%;   
 }
 
 .title {
@@ -47,6 +84,9 @@ a {
 
 .theme-changer {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .countries-container {
@@ -86,6 +126,7 @@ a {
 
 .card-text p {
     margin-block: 8px;
+
 }
 
 .country-card img {
@@ -97,7 +138,7 @@ a {
     max-width: 1200px;
     margin-inline: auto;
     margin-top: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     display: flex;
     justify-content: space-between;
     gap: 24px;
@@ -155,5 +196,5 @@ a {
     .search-filter-container {
         flex-direction: column;
     }
-    
+
 }

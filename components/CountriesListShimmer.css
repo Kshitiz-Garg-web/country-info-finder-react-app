@@ -1,0 +1,125 @@
+/* .shimmer-card {
+  height: 316.4px;
+  background-color: #ccc;
+}
+
+.shimmer-card .img {
+  height: 150px;
+  outline: none;
+  background-color: #61606098;;
+}
+
+.shimmer-card h3 {
+  height: 24px;
+  width: 40%;
+  background-color: #61606098;
+}
+
+.shimmer-card p {
+  height: 10px;
+  width: 80%;
+  background-color: #61606098;
+}
+ */
+
+
+.shimmer-card {
+  height: 316.4px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.shimmer-card .img {
+  height: 150px;
+  outline: none;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card .img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  animation: shimmer 1.5s infinite;
+
+}
+
+.shimmer-card h3 {
+  height: 24px;
+  width: 40%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.shimmer-card h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-card p {
+  height: 10px;
+  width: 80%;
+  background-color: #61606098;
+  position: relative;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.shimmer-card p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  animation: shimmer 1.5s infinite;
+
+}

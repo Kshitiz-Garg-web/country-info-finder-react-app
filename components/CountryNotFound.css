@@ -1,0 +1,53 @@
+/* Container styling */
+.notfound {
+  /* background-color: red; */
+  height: calc(100% - 73px);
+  text-align: center;
+  /* margin-top: 4rem; */
+  /* padding: 2rem; */
+  /* border-radius: 12px; */
+  /* background-color: #f9f9f9; */
+  color: #222;
+  /* max-width: 600px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+main.dark{
+  color: white;
+}
+
+/* Icon */
+.notfound .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+.notfound h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #c0392b;
+}
+
+/* Paragraphs */
+.notfound p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Dark mode support */
+main.dark .notfound {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+main.dark .notfound h2 {
+  color: #e74c3c;
+}
